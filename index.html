@@ -1,0 +1,85 @@
+<html>
+   <head>
+      <title>
+      ☕모주의 카페 이벤트☕
+      </title>
+      <style>
+         a {
+	    margin-left: 25%; width: 50%; height: auto;
+         }
+         table {
+	    width: 90%;
+	    height: 500px;
+	    border-collapse: collapse;
+	    border: 5px dashed #2b2b2b;
+         }
+         td, tr {
+	    border-collapse: collapse;
+	    border: 4px dashed #737272;
+	    text-align: center;
+         } 
+	 .centered {
+	    display: flex;
+            justify-content: center;
+	    align-items: center;
+         }
+      </style>
+   </head>
+   <body><br><br><br>
+      <div style="height: 90px; text-align: center; margin-left: 10%; width: 80%; background: black; border-radius: 20px;"><h1 style="color: white; 
+ margin: 0; padding: 2.5%;">🚨카페의 소통왕을 찾아라!🚨</h1></div>
+<br><br><br>
+<div style="font-weight: 670; font-size: 27px; color: black; text-align: center;"><span id="click_count">남은 클릭 수: 4</span></div>
+   <a class="centered" href="javascript: change_img()">
+	<img id="image" src="https://i.imgur.com/Pm1Dnth.png"/> 
+   </a>
+   <div style="height: 55px; text-align: center; margin-left: 32.5%; width: 35%; background: #fff6d1; align: center; border-radius: 20px;"><h2 style="color: #eb2c1e; 
+ margin: 0; padding: 10;">상단의 이미지를 클릭해보세요<br></h2></div>
+<br><br><br>
+   <div class="centered"><table>
+      <tr>
+         <td style= "font-weight: 650; background: #ffb3ad; font-size: 26px;">
+            이벤트 정보
+         </td>
+         <td style= "background: #e8e8e8; font-size: 21px;">
+            이벤트 진행기간 동안 소통을 가장 열심히 한 소통왕 세 분을 뽑습니다!<br>댓글과 글 모두 활동에 포함되며 최대한 공정하게 심사하도록 하겠습니다.
+         </td>
+      </tr>
+      <tr>
+         <td style= "font-weight: 650; background: #ffb3ad; font-size: 26px;">
+            이벤트 진행기간
+         </td>
+          <td style = "background: #e8e8e8; font-size: 28px;">
+            8월 5일 수요일 오후 2시 ~ 6시
+         </td>
+      </tr>
+      <tr>
+         <td style= "font-weight: 650; background: #ffb3ad; font-size: 26px;">
+            이벤트 보상
+         </td>
+          <td style= "background: #e8e8e8; font-size: 30px;">
+            1등: 💰 2,500,000<br>
+            2등: 💰 1,000,000<br>
+            3등: 💰    450,000
+         </td>
+      </tr>
+   </table></div>
+   <script type="text/javascript">
+      let img_count = 0;
+      function change_img() {
+         const img = document.getElementById('image');
+	 const imgs = [
+	    'https://i.imgur.com/Pm1Dnth.png',
+	    'https://i.imgur.com/QYoPiaO.gif',
+            'https://i.imgur.com/uzuGEtX.png',
+            'https://i.imgur.com/u1Pw4AK.png',
+            'https://i.imgur.com/oJtHTPH.png'
+	 ];
+	 if(img_count === imgs.length - 1) return;
+         img_count++;
+         img.src = imgs[img_count];
+         document.getElementById('click_count').innerHTML = "남은 클릭 수: " + ( imgs.length - img_count - 1 );
+      }
+   </script>
+   </body>
+</html>
